@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Socialyat- Connect The World",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "stert": "node server.js",
+    "start": "node server.js",
     "server": "nodemon server.js"
   },
   "author": "7odashraf",
