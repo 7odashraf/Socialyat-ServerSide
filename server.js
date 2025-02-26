@@ -7,6 +7,8 @@ import posts from "./routes/posts.js";
 
 const app= express();
 
+app.use(express.json());
+
 app.use("/",auth);
 app.use("/api/profile",profile);
 app.use("/api/users",users);
@@ -18,4 +20,4 @@ app.get("/", (req,res)=> res.send("Server is working correctly"))
 
 const PORT= process.env.PORT||5000;
 
-app.listen(PORT,()=> console.log(`Server Has Started At PORT: ${PORT}`))
+app.listen(PORT,()=> console.log(`Server Has Started At PORT: ${PORT}`));
