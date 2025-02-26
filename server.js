@@ -1,7 +1,6 @@
 import express from "express";
 import connectDB from "./config/db.js";
-import auth from "./routes/auth.js";
-import profile from "./routes/profile.js";
+import profiles from "./routes/profiles.js";
 import users from "./routes/users.js";
 import posts from "./routes/posts.js";
 
@@ -9,8 +8,7 @@ const app= express();
 
 app.use(express.json());
 
-app.use("/",auth);
-app.use("/api/profile",profile);
+app.use("/api/profiles",profiles);
 app.use("/api/users",users);
 app.use("/api/posts",posts);
 
